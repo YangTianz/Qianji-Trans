@@ -1,0 +1,84 @@
+[
+    {
+        "conditions": [
+            {
+                "operator": "in",
+                "expect_value": "小鹏",
+                "field_to_check": "counterparty"
+            },
+            {
+                "operator": "in",
+                "expect_value": "充电",
+                "field_to_check": "merchandise"
+            }
+        ],
+        "order": 1,
+        "output_id": "充电费"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "in",
+                "expect_value": "麦当劳",
+                "field_to_check": "counterparty"
+            }
+        ],
+        "order": 20,
+        "output_id": "吃饭"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "in",
+                "expect_value": "盒马",
+                "field_to_check": "counterparty"
+            }
+        ],
+        "output_id": "买菜"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "==",
+                "expect_value": "商户消费",
+                "field_to_check": "type_"
+            },
+            {
+                "operator": "in",
+                "expect_value": "luckin",
+                "field_to_check": "counterparty"
+            }
+        ],
+        "output_id": "咖啡"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "==",
+                "expect_value": "群收款",
+                "field_to_check": "type_"
+            },
+            {
+                "operator": "is",
+                "expect_value": true,
+                "field_to_check": "is_income"
+            }
+        ],
+        "output_id": "拼单回流"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "==",
+                "expect_value": "交通出行",
+                "field_to_check": "type_"
+            },
+            {
+                "operator": "in",
+                "expect_value": "高德打车",
+                "field_to_check": "counterparty"
+            }
+        ],
+        "output_id": "打车"
+    }
+]

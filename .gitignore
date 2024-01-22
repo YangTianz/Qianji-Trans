@@ -1,0 +1,11 @@
+__pycache__/
+.vscode/
+poetry.lock
+
+configs/
+output/
+*.db
+test/custom_test
+
+test.py
+start.bat

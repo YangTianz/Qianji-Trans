@@ -1,0 +1,46 @@
+[tool.ruff]
+line-length = 79
+indent-width = 4
+# Assume Python 3.8
+target-version = "py311"
+
+
+[tool.ruff.lint]
+ignore = ['E501']
+
+[tool.ruff.lint.isort]
+force-single-line = true
+lines-after-imports = 2
+lines-between-types = 1
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+
+
+[tool.mypy]
+exclude = "test/*"
+
+[[tool.mypy.overrides]]
+module = "billing.*"
+disallow_untyped_defs = true
+
+[tool.poetry]
+name = "billing"
+version = "0.1.0"
+description = ""
+authors = ["YangTianz <tingerytz@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.8.0"
+pytest = "^7.4.4"
+ruff = "^0.1.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

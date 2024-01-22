@@ -1,0 +1,162 @@
+[
+    {
+        "conditions": [
+            {
+                "operator": "in",
+                "expect_value": "0702",
+                "field_to_check": "account_text"
+            },
+            {
+                "operator": "in",
+                "expect_value": "招商银行",
+                "field_to_check": "account_text"
+            }
+        ],
+        "output_id": "招行工资卡(0702)"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "in",
+                "expect_value": "2508",
+                "field_to_check": "account_text"
+            }
+        ],
+        "output_id": "招行工资卡(0702)"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "in",
+                "expect_value": "0638",
+                "field_to_check": "account_text"
+            }
+        ],
+        "output_id": "招行信用卡(0638)"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "in",
+                "expect_value": "1908",
+                "field_to_check": "account_text"
+            }
+        ],
+        "output_id": "招行信用卡(0638)"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "==",
+                "expect_value": "零钱",
+                "field_to_check": "account_text"
+            }
+        ],
+        "output_id": "微信"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "in",
+                "expect_value": "6882",
+                "field_to_check": "account_text"
+            }
+        ],
+        "output_id": "中行信用卡(6882)"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "==",
+                "expect_value": "账户余额",
+                "field_to_check": "account_text"
+            }
+        ],
+        "output_id": "支付宝"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "==",
+                "expect_value": "余额宝",
+                "field_to_check": "account_text"
+            }
+        ],
+        "output_id": "支付宝"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "==",
+                "expect_value": "wechat",
+                "field_to_check": "loader"
+            },
+            {
+                "operator": "is",
+                "expect_value": true,
+                "field_to_check": "is_income"
+            },
+            {
+                "operator": "==",
+                "expect_value": "已存入零钱",
+                "field_to_check": "status_wechat"
+            }
+        ],
+        "output_id": "微信"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "==",
+                "expect_value": "wechat",
+                "field_to_check": "loader"
+            },
+            {
+                "operator": "is",
+                "expect_value": true,
+                "field_to_check": "is_income"
+            },
+            {
+                "operator": "==",
+                "expect_value": "已到账",
+                "field_to_check": "status_wechat"
+            }
+        ],
+        "output_id": "微信"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "==",
+                "expect_value": "wechat",
+                "field_to_check": "loader"
+            },
+            {
+                "operator": "is",
+                "expect_value": true,
+                "field_to_check": "is_income"
+            },
+            {
+                "operator": "==",
+                "expect_value": "已收钱",
+                "field_to_check": "status_wechat"
+            }
+        ],
+        "output_id": "微信"
+    },
+    {
+        "conditions": [
+            {
+                "operator": "==",
+                "expect_value": "alipay",
+                "field_to_check": "loader"
+            },
+            {
+                "operator": "is",
+                "expect_value": true,
+                "field_to_check": "is_income"
+            }
+        ],
+        "output_id": "支付宝"
+    }
+]
