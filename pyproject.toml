@@ -1,7 +1,7 @@
 [tool.ruff]
 line-length = 79
 indent-width = 4
-# Assume Python 3.8
+# Assume Python 3.11
 target-version = "py311"
 
 
@@ -34,7 +34,8 @@ authors = ["YangTianz <tingerytz@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.11"
+ytzlib = {git = "https://github.com/YangTianz/ytzlib.git"}
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.8.0"
