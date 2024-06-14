@@ -173,12 +173,12 @@ async def main() -> None:
     unconfirmed_transaction_event = asyncio.Event()
     func = partial(load_from_raw_bill, args, unconfirmed_transaction_event)
     ticker.repeat_call(func, 3.0)
-    func = partial(output_confirmed_data, args, unconfirmed_transaction_event)
+    func = partial(output_confirmed_data, args, unconfirmed_transaction_event)  # type: ignore
     ticker.repeat_call(func, 1.0)
     uninsert_transaction_list: asyncio.Queue = asyncio.Queue()
-    func = partial(handle_confirmed_data, args, uninsert_transaction_list)
+    func = partial(handle_confirmed_data, args, uninsert_transaction_list)  # type: ignore
     ticker.repeat_call(func, 3.0)
-    func = partial(finial_adb_output, args, uninsert_transaction_list)
+    func = partial(finial_adb_output, args, uninsert_transaction_list)  # type: ignore
     ticker.repeat_call(func, 4.0)
     await asyncio.gather(ticker.start())
 
