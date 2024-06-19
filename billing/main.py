@@ -92,8 +92,8 @@ def load_from_raw_bill(args: "BillingArgs", event: asyncio.Event) -> None:
                     new_transactions[tid] = transaction
     if new_transactions:
         logger.show(
-            "[load transactions from wechat and alipay][new count=%s]"
-            % len(new_transactions),
+            "[load transactions from wechat and alipay][new count=%s]",
+            len(new_transactions)
         )
         event.set()
         insert_transactions(list(new_transactions.values()), TranStatus.Raw)
@@ -115,8 +115,8 @@ async def output_confirmed_data(
             b = bytes("\n".join(output), encoding="utf-8")
             f.write(codecs.BOM_UTF8 + b)
             logger.show(
-                "[write unconfirmed transactions][count=%s]"
-                % len(unconfirmed_t)
+                "[write unconfirmed transactions][count=%s]",
+                len(unconfirmed_t)
             )
     event.clear()
 
@@ -146,7 +146,7 @@ async def handle_confirmed_data(
                 list(confirmed.values()), TranStatus.Classified
             )
             dump_db(args.output_path)
-            logger.show("[transactions confirmed][count=%s]" % len(confirmed))
+            logger.show("[transactions confirmed][count=%s]", len(confirmed))
             for t in confirmed.values():
                 await queue.put(t)
 
